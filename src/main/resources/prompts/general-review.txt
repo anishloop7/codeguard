@@ -1,0 +1,20 @@
+REVIEW MODE: GENERAL
+
+Perform a comprehensive code quality review covering all dimensions.
+
+Priority areas to examine:
+- Code correctness: logic errors, off-by-one errors, null pointer risks
+- SOLID principles violations (especially Single Responsibility and Open/Closed)
+- Design pattern misuse or missed opportunities
+- Error handling: swallowed exceptions, missing catch blocks, no fallback logic
+- Resource management: unclosed streams, connections, file handles
+- Code duplication (DRY violations)
+- Naming clarity: misleading variable/method names, magic numbers without constants
+- Method length and complexity (cyclomatic complexity > 10 is a smell)
+- Missing or inadequate unit test coverage implied by the diff
+- Javadoc/comment quality for public APIs
+- Thread safety issues in shared mutable state
+- Proper use of Java Optional vs null returns
+
+Flag any code that could cause NullPointerException in production as HIGH severity.
+Flag missing error handling for external service calls as HIGH severity.

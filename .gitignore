@@ -1,0 +1,36 @@
+# ── Compiled ─────────────────────────────────────────────────
+target/
+*.class
+*.jar
+*.war
+
+# ── Maven ────────────────────────────────────────────────────
+.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+# ── IDE ──────────────────────────────────────────────────────
+.idea/
+*.iws
+*.iml
+*.ipr
+.vscode/
+*.swp
+*.swo
+
+# ── Environment / Secrets ─────────────────────────────────────
+.env
+.env.local
+application-local.properties
+application-prod.properties
+
+# !! NEVER commit real API keys or webhook secrets !!
+# Use environment variables: OPENAI_API_KEY, GITHUB_WEBHOOK_SECRET
+
+# ── OS ───────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+
+# ── Logs ─────────────────────────────────────────────────────
+*.log
+logs/

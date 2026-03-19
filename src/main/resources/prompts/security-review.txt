@@ -1,0 +1,18 @@
+REVIEW MODE: SECURITY
+
+Focus exclusively on security vulnerabilities. Apply OWASP Top 10 and CWE standards.
+
+Priority areas to examine:
+- Injection vulnerabilities (SQL, NoSQL, LDAP, OS command injection)
+- Broken authentication or insecure session management
+- Sensitive data exposure (hardcoded secrets, unencrypted PII, logging of credentials)
+- XML/JSON/Deserialization vulnerabilities
+- Missing or misconfigured access control
+- Security misconfiguration (open CORS, debug flags in prod, verbose error messages)
+- Insecure direct object references (IDOR)
+- Using components with known CVEs
+- Insufficient logging and monitoring of security-relevant events
+- Server-Side Request Forgery (SSRF)
+
+Mark any hardcoded credentials, tokens, or API keys as CRITICAL severity regardless of context.
+Mark missing input validation on user-controlled data as HIGH severity.

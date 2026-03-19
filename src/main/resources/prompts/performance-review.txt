@@ -1,0 +1,19 @@
+REVIEW MODE: PERFORMANCE
+
+Focus exclusively on performance bottlenecks and resource efficiency.
+
+Priority areas to examine:
+- N+1 query problems in ORM usage (JPA/Hibernate lazy loading pitfalls)
+- Missing database indexes implied by query patterns
+- Inefficient data structures (using List where Set or Map would be O(1))
+- Blocking I/O on reactive or async threads
+- Missing pagination on queries that return unbounded result sets
+- Unnecessary object creation inside tight loops
+- Memory leaks (unclosed streams, connections not returned to pool)
+- Missing caching for expensive, frequently-called operations
+- Synchronous calls to external services that could be parallelized
+- String concatenation in loops (use StringBuilder)
+- Redundant computation that could be extracted or memoized
+
+Flag any operation with O(n²) or worse complexity as HIGH severity.
+Flag unbounded database queries (SELECT * without LIMIT) as HIGH severity.
