@@ -38,14 +38,14 @@ public class GitHubWebhookService {
             if (signatureHeader == null || !signatureHeader.startsWith("sha256=")) {
                 return false;
             }
-            String receivedHex = signatureHeader.substring("sha256=".length());
+            String receivedHexName = signatureHeader.substring("sha256=".length());
 
             Mac mac = Mac.getInstance("HmacSHA256");
             mac.init(new SecretKeySpec(webhookSecret.getBytes(StandardCharsets.UTF_8), "HmacSHA256"));
             byte[] expectedBytes = mac.doFinal(rawPayload.getBytes(StandardCharsets.UTF_8));
             String expectedHex = HexFormat.of().formatHex(expectedBytes);
 
-            return constantTimeEquals(receivedHex, expectedHex);
+            return constantTimeEquals(receivedHexName, expectedHex);
         } catch (Exception e) {
             log.error("Signature validation error: {}", e.getMessage());
             return false;
