@@ -1,7 +1,7 @@
 # CodeGuard 🛡️
 ### AI-Powered Code Review Assistant
 
-> Automatically reviews GitHub Pull Requests using OpenAI GPT-4, Spring AI, and event-driven GitHub Webhooks — with configurable review profiles for Security, Performance, and General code quality.
+> Automatically reviews GitHub Pull Requests using OpenAI GPT-4, Spring AI, and event-driven GitHub Webhooks — with configurable review profiles for Security, Performance, and General code quality.Generate
 
 ![Java](https://img.shields.io/badge/Java-17-orange?style=flat-square&logo=java)
 ![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.2.4-brightgreen?style=flat-square&logo=springboot)
